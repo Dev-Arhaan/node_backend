@@ -1,0 +1,43 @@
+### GET /
+GET http://localhost:5000
+
+### POST /register
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "abc@email",
+    "password": "123123"
+}
+
+### POST /login
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "abc@email",
+    "password": "123123"
+}
+
+### GET /todos
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MTY5NDcyLCJleHAiOjE3MzUyNTU4NzJ9.ZYOb008ybqlto0wYQlKl66Qv9PAVZrkJa3oaPVEaXZc
+### POST /todos add todos
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MTY5NDcyLCJleHAiOjE3MzUyNTU4NzJ9.ZYOb008ybqlto0wYQlKl66Qv9PAVZrkJa3oaPVEaXZc
+Content-Type: application/json
+
+{
+    "task": "finish coding this project"
+}
+### PUT /todos add todos
+PUT http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MTY5NDcyLCJleHAiOjE3MzUyNTU4NzJ9.ZYOb008ybqlto0wYQlKl66Qv9PAVZrkJa3oaPVEaXZc
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+### DELETE /todos remove todos
+DELETE  http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MTY5NDcyLCJleHAiOjE3MzUyNTU4NzJ9.ZYOb008ybqlto0wYQlKl66Qv9PAVZrkJa3oaPVEaXZc
